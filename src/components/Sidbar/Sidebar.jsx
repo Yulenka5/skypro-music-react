@@ -1,3 +1,7 @@
+import SpriteIcon from "../../assets/img/icon/sprite.svg";
+import PlayList_1 from "../../assets/img/playlist01.png";
+import PlayList_2 from "../../assets/img/playlist02.png";
+import PlayList_3 from "../../assets/img/playlist03.png";
 
 
 function Sidebar () {
@@ -7,7 +11,7 @@ function Sidebar () {
           <p className="sidebar__personal-name">Sergey.Ivanov</p>
           <div className="sidebar__icon">
             <svg alt="logout">
-              <use xlinkHref="img/icon/sprite.svg#logout"></use>
+              <use xlinkHref={`${SpriteIcon}#logout`}></use>
             </svg>
           </div>
         </div>
@@ -17,7 +21,7 @@ function Sidebar () {
               <a className="sidebar__link" href="#">
                 <img
                   className="sidebar__img"
-                  src="img/playlist01.png"
+                  src={PlayList_1}
                   alt="day's playlist"
                 />
               </a>
@@ -26,7 +30,7 @@ function Sidebar () {
               <a className="sidebar__link" href="#">
                 <img
                   className="sidebar__img"
-                  src="img/playlist02.png"
+                  src={PlayList_2}
                   alt="day's playlist"
                 />
               </a>
@@ -35,7 +39,7 @@ function Sidebar () {
               <a className="sidebar__link" href="#">
                 <img
                   className="sidebar__img"
-                  src="img/playlist03.png"
+                  src={PlayList_3}
                   alt="day's playlist"
                 />
               </a>

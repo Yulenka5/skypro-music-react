@@ -1,4 +1,5 @@
  import "../Registr/Registr";
+ import LogoModal from "../../assets/img/logo_modal";
 
 function Registr () {
     <div className="wrapper">
@@ -7,7 +8,7 @@ function Registr () {
           <form className="modal__form-login">
             <a href="../">
               <div className="modal__logo">
-                <img src="../img/logo_modal.png" alt="logo" />
+                <img src={LogoModal} alt="logo" />
               </div>
             </a>
             <input
