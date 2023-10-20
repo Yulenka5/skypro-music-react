@@ -1,7 +1,6 @@
 import "../src/App.css";
 import Bar from "./components/Bar/Bar";
 import Menu from "./components/Menu/Menu";
-import Player from "./components/Player/Player";
 import Sidebar from "./components/Sidbar/Sidebar";
 import TrackList from "./components/TrackList/TrackList";
 
@@ -12,7 +11,6 @@ function App() {
         <main className="main">
             <Menu />
             <TrackList />
-            <Player />
             <Sidebar />
         </main>
         <Bar />
