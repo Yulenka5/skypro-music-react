@@ -1,11 +1,12 @@
-import Track from "../Track/Track"
+import Track from "../Track/Track";
+import SpriteIcon from "../../assets/img/icon/sprite.svg";
 
 function TrackList () {
     return (
         <div className="main__centerblock centerblock">
             <div className="centerblock__search search">
               <svg className="search__svg">
-                <use xlinkHref="img/icon/sprite.svg#icon-search"></use>
+                <use xlinkHref={`${SpriteIcon}#icon-search`}></use>
               </svg>
               <input
                 className="search__text"
@@ -32,7 +33,7 @@ function TrackList () {
                 <div className="playlist-title__col col03">АЛЬБОМ</div>
                 <div className="playlist-title__col col04">
                   <svg className="playlist-title__svg" alt="time">
-                    <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
+                    <use xlinkHref={`${SpriteIcon}#icon-watch`}></use>
                   </svg>
                 </div>
               </div>

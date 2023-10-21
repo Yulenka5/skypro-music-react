@@ -1,4 +1,6 @@
 import "../Login/Login";
+import LogoModal from "../../assets/img/logo_modal";
+
 
 function Login () {
     <div className="wrapper">
@@ -7,7 +9,7 @@ function Login () {
           <form className="modal__form-login" action="#">
             <a href="../">
               <div className="modal__logo">
-                <img src="../img/logo_modal.png" alt="logo" />
+                <img src={LogoModal} alt="logo" />
               </div>
             </a>
             <input

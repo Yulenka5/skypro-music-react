@@ -1,4 +1,4 @@
-import {Icon} from "../../assets/img/icon"
+import SpriteIcon from "../../assets/img/icon/sprite.svg";
 
 function Track () {
     return (
@@ -8,7 +8,7 @@ function Track () {
         <div className="track__title">
           <div className="track__title-image">
             <svg className="track__title-svg" alt="music">
-              <Icon name="note" />
+            <use xlinkHref={`${SpriteIcon}#icon-note`}></use>
             </svg>
           </div>
           <div className="track__title-text">
@@ -29,7 +29,7 @@ function Track () {
         </div>
         <div className="track__time">
           <svg className="track__time-svg" alt="time">
-            <Icon name="like" />
+          <use xlinkHref={`${SpriteIcon}#icon-like`}></use>
           </svg>
           <span className="track__time-text">4:44</span>
         </div>
