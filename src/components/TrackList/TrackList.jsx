@@ -1,7 +1,23 @@
 import Track from "../Track/Track";
 import SpriteIcon from "../../assets/img/icon/sprite.svg";
+import Filter from "../Filter/Filter";
+import { useState } from "react";
 
 function TrackList () {
+
+  const [activeFilter, setActiveFilter] = useState(null);
+
+  function changeActiveFilter (newFilter) {
+setActiveFilter(newFilter)
+if (activeFilter===newFilter) {
+setActiveFilter(null)
+} else {
+  setActiveFilter(newFilter)
+}
+//1. сделать так, чтобы при клике на кнопку фильтра в состояние устанавл строка с названием фильтра
+//2. сделать условие по аналогии с меню, что если проп isOpend = тру, то показываем фильтр
+  }
+
     return (
         <div className="main__centerblock centerblock">
             <div className="centerblock__search search">
@@ -18,9 +34,7 @@ function TrackList () {
             <h2 className="centerblock__h2">Треки</h2>
             <div className="centerblock__filter filter">
               <div className="filter__title">Искать по:</div>
-              <div className="filter__button button-author _btn-text">
-                исполнителю
-              </div>
+              <Filter filterName={'perfomer'} isOpened={activeFilter==='perfomer'} onClick={()=>changeActiveFilter (newFilter)}/>
               <div className="filter__button button-year _btn-text">
                 году выпуска
               </div>
