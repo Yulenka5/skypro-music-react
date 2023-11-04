@@ -30,13 +30,21 @@ setActiveFilter(activeFilter === newFilter ? null : newFilter);
             <h2 className="centerblock__h2">Треки</h2>
             <div className="centerblock__filter filter">
               <div className="filter__title">Искать по:</div>
-              <Filter filterName={'исполнителю'} 
-              isOpened={activeFilter==='perfomer' && <div>исполнителю</div>} 
-              onClick={()=>changeActiveFilter ('perfomer')}/>
-              <div className="filter__button button-year _btn-text">
-                году выпуска
-              </div>
-              <div className="filter__button button-genre _btn-text">жанру</div>
+              <Filter 
+              filterName={'исполнителю'} 
+              isOpened={activeFilter==='perfomer'} 
+              filterList={'исполнитель'}
+              action={()=>changeActiveFilter ('perfomer')}/>
+              <Filter 
+              filterName={'году выпуска'} 
+              isOpened={activeFilter==='year'} 
+              filterList={'год выпуска'}
+              action={()=>changeActiveFilter ('year')}/>
+              <Filter 
+              filterName={'жанру'} 
+              isOpened={activeFilter==='genre'} 
+              filterList={'жанру'}
+              action={()=>changeActiveFilter ('genre')}/>
             </div>
             <div className="centerblock__content">
               <div className="content__title playlist-title">
