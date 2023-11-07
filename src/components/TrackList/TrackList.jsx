@@ -3,6 +3,7 @@ import SpriteIcon from "../../assets/img/icon/sprite.svg";
 import Filter from "../Filter/Filter";
 import { useState } from "react";
 
+
 function TrackList () {
 
   const [activeFilter, setActiveFilter] = useState(null);
@@ -10,8 +11,6 @@ function TrackList () {
   function changeActiveFilter (newFilter) {
 setActiveFilter(activeFilter === newFilter ? null : newFilter);
 
-//1. сделать так, чтобы при клике на кнопку фильтра в состояние устанавл строка с названием фильтра
-//2. сделать условие по аналогии с меню, что если проп isOpend = тру, то показываем фильтр
   }
 
     return (
