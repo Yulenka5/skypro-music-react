@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import SpriteIcon from '../../assets/img/icon/sprite.svg';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-
+import * as S from './TrackStyles';
 function Track() {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -13,11 +13,11 @@ function Track() {
   }, [])
 
   return (
-    <div className="content__playlist playlist">
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+    <S.ContentPlaylist className="playlist">
+      <S.PlaylistItem>
+        <S.PlaylistTrack className="track">
+          <S.TrackTitle>
+            <S.TrackTitleImage>
               {isLoading ? (
                 <Skeleton
                   width={55}
@@ -26,12 +26,12 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-                <svg className="track__title-svg" alt="music">
+                <S.TrackTitleSvg alt="music">
                   <use xlinkHref={`${SpriteIcon}#icon-note`}></use>
-                </svg>
+                </S.TrackTitleSvg>
               )}
-            </div>
-            <div className="track__title-text">
+            </S.TrackTitleImage>
+            <S.TrackTitleText>
               {isLoading ? (
                 <Skeleton
                   width={270}
@@ -39,43 +39,43 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-                <a className="track__title-link" href="http://">
-                  Guilt <span className="track__title-span"></span>
-                </a>
+                <S.TrackTitleLink href="http://">
+                  Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
+                </S.TrackTitleLink>
               )}
-            </div>
-          </div>
-          <div className="track__author">
+            </S.TrackTitleText>
+          </S.TrackTitle>
+          <S.TrackAuthor>
             {isLoading ? (
               <Skeleton width={270} 
               baseColor="#202020" 
               highlightColor="#444" />
             ) : (
-              <a className="track__author-link" href="http://">
+              <S.TrackAuthorLink href="http://">
                 Nero
-              </a>
+              </S.TrackAuthorLink>
             )}
-          </div>
-          <div className="track__album">
+          </S.TrackAuthor>
+          <S.TrackAlbum>
             {isLoading ? (
               <Skeleton width={450} 
               baseColor="#202020" 
               highlightColor="#444" />
             ) : (
-              <a className="track__album-link" href="http://">
+              <S.TrackAlbumLink href="http://">
                 Welcome Reality
-              </a>
+              </S.TrackAlbumLink>
             )}
-          </div>
-          <div className="track__time">
-            <svg className="track__time-svg" alt="time">
+          </S.TrackAlbum>
+          <S.TrackTime>
+            <S.TrackTimeSvg alt="time">
               <use xlinkHref={`${SpriteIcon}#icon-like`}></use>
-            </svg>
-            <span className="track__time-text">4:44</span>
-          </div>
-        </div>
-      </div>
-    </div>
+            </S.TrackTimeSvg>
+            <S.TrackTimeText>4:44</S.TrackTimeText>
+          </S.TrackTime>
+        </S.PlaylistTrack>
+      </S.PlaylistItem>
+    </S.ContentPlaylist>
   )
 }
 

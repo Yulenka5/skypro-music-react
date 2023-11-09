@@ -1,8 +1,8 @@
-import Track from "../Track/Track";
-import SpriteIcon from "../../assets/img/icon/sprite.svg";
-import Filter from "../Filter/Filter";
-import { useState } from "react";
-
+import Track from '../Track/Track';
+import SpriteIcon from '../../assets/img/icon/sprite.svg';
+import Filter, { perfomer, year, genre } from '../Filter/Filter';
+import { useState } from 'react';
+import * as S from './TrackListStyles';
 
 function TrackList () {
 
@@ -12,53 +12,51 @@ function TrackList () {
 setActiveFilter(activeFilter === newFilter ? null : newFilter);
 
   }
-
     return (
-        <div className="main__centerblock centerblock">
-            <div className="centerblock__search search">
-              <svg className="search__svg">
+        <S.MainCenterblock className="centerblock">
+            <S.CenterblockSearch className="search">
+              <S.SearchSvg>
                 <use xlinkHref={`${SpriteIcon}#icon-search`}></use>
-              </svg>
-              <input
-                className="search__text"
+              </S.SearchSvg>
+              <S.SearchText
                 type="search"
                 placeholder="Поиск"
                 name="search"
               />
-            </div>
-            <h2 className="centerblock__h2">Треки</h2>
-            <div className="centerblock__filter filter">
-              <div className="filter__title">Искать по:</div>
+            </S.CenterblockSearch>
+            <S.CenterblockH2>Треки</S.CenterblockH2>
+            <S.CenterblockFilter className="filter">
+              <S.FilterTitle>Искать по:</S.FilterTitle>
               <Filter 
               filterName={'исполнителю'} 
               isOpened={activeFilter==='perfomer'} 
-              filterList={'исполнитель'}
+              filterList={perfomer}
               action={()=>changeActiveFilter ('perfomer')}/>
               <Filter 
               filterName={'году выпуска'} 
               isOpened={activeFilter==='year'} 
-              filterList={'год выпуска'}
+              filterList={year}
               action={()=>changeActiveFilter ('year')}/>
               <Filter 
               filterName={'жанру'} 
               isOpened={activeFilter==='genre'} 
-              filterList={'жанру'}
+              filterList={genre}
               action={()=>changeActiveFilter ('genre')}/>
-            </div>
-            <div className="centerblock__content">
-              <div className="content__title playlist-title">
-                <div className="playlist-title__col col01">Трек</div>
-                <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-                <div className="playlist-title__col col03">АЛЬБОМ</div>
-                <div className="playlist-title__col col04">
-                  <svg className="playlist-title__svg" alt="time">
+            </S.CenterblockFilter>
+            <S.CenterblockContent>
+              <S.ContentTitle className="playlist-title">
+                <S.ContentTitleCol className="col01">Трек</S.ContentTitleCol>
+                <S.ContentTitleCol className="col02">ИСПОЛНИТЕЛЬ</S.ContentTitleCol>
+                <S.ContentTitleCol className="col03">АЛЬБОМ</S.ContentTitleCol>
+                <S.ContentTitleCol className="col04">
+                  <S.PlaylistTitleSvg alt="time">
                     <use xlinkHref={`${SpriteIcon}#icon-watch`}></use>
-                  </svg>
-                </div>
-              </div>
-              </div>
+                  </S.PlaylistTitleSvg>
+                </S.ContentTitleCol>
+              </S.ContentTitle>
+              </S.CenterblockContent>
               <Track />
-              </div>
+              </S.MainCenterblock>
     )
 }
 

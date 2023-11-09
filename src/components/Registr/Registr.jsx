@@ -1,41 +1,42 @@
  import "../Registr/Registr";
  import LogoModal from "../../assets/img/logo_modal";
+ import * as S from './RegistrStyles';
 
 function Registr () {
-    <div className="wrapper">
-      <div className="container-signup">
-        <div className="modal__block">
-          <form className="modal__form-login">
+    <S.Wrapper>
+      <S.ContainerSingup>
+        <S.ModlaBlock>
+          <S.ModalFormLogin>
             <a href="../">
-              <div className="modal__logo">
+              <S.ModalLogo>
                 <img src={LogoModal} alt="logo" />
-              </div>
+              </S.ModalLogo>
             </a>
-            <input
-              className="modal__input login"
+            <S.ModalInput
+              className="login"
               type="text"
               name="login"
               placeholder="Почта"
             />
-            <input
-              className="modal__input password-first"
+            <S.ModalInput
+              className="password-first"
               type="password"
               name="password"
               placeholder="Пароль"
             />
-            <input
-              className="modal__input password-double"
+            <S.ModalInput
+              className="password-double"
               type="password"
               name="password"
               placeholder="Повторите пароль"
             />
-            <button className="modal__btn-signup-ent">
+            <S.ModalBtnSingupEnt>
               <a href="../index.html">Зарегистрироваться</a>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+            </S.ModalBtnSingupEnt>
+          </S.ModalFormLogin>
+        </S.ModlaBlock>
+      </S.ContainerSingup>
+    </S.Wrapper>
 }
 
 export default Registr; 

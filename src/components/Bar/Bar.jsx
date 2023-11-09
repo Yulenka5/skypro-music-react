@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import SpriteIkon from '../../assets/img/icon/sprite.svg';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import * as S from './BarStyles';
+
 
 function Bar() {
   const [isLoading, setIsLoading] = useState(true)
@@ -13,47 +15,47 @@ function Bar() {
   }, [])
 
   return (
-    <div className="bar">
-      <div className="bar__content">
-        <div className="bar__player-progress" />
-        <div className="bar__player-block">
-          <div className="bar__player player">
-            <div className="player__controls">
-              <div className="player__btn-prev">
-                <svg className="player__btn-prev-svg" alt="prev">
-                  <use xlinkHref={`${SpriteIkon}#icon-prev`} />
-                </svg>
-              </div>
-              <div className="player__btn-play _btn">
-                <svg className="player__btn-play-svg" alt="play">
+    <S.Bar>
+      <S.BarContent>
+        <S.BarPlayerProgress/>
+        <S.BarPlayerBlock>
+          <S.BarPlayer className="player">
+            <S.PlayerControls>
+              <S.PlayerBtnPrev>
+                <S.PlayerBtnPrevSvg className="_btn-icon" alt="prev">
+                  <use xlinkHref={`${SpriteIkon}#icon-prev`}/>
+                </S.PlayerBtnPrevSvg>
+              </S.PlayerBtnPrev>
+              <S.PlayerBtnPlay className="_btn">
+                <S.PlayerBtnPlaySvg className="_btn-icon" alt="play">
                   <use xlinkHref={`${SpriteIkon}#icon-play"`} />
-                </svg>
-              </div>
-              <div className="player__btn-next">
-                <svg className="player__btn-next-svg" alt="next">
+                </S.PlayerBtnPlaySvg>
+              </S.PlayerBtnPlay>
+              <S.PlayerBtnNext>
+                <S.PlayerBtnNextSvg className="_btn-icon" alt="next">
                   <use xlinkHref={`${SpriteIkon}#icon-next`} />
-                </svg>
-              </div>
-              <div className="player__btn-repeat _btn-icon">
-                <svg className="player__btn-repeat-svg" alt="repeat">
+                </S.PlayerBtnNextSvg>
+              </S.PlayerBtnNext>
+              <S.PlayerBtnRepeat>
+                <S.PlayerBtnRepeatSvg className="_btn-icon" alt="repeat">
                   <use xlinkHref={`${SpriteIkon}#icon-repeat`} />
-                </svg>
-              </div>
-              <div className="player__btn-shuffle _btn-icon">
-                <svg className="player__btn-shuffle-svg" alt="shuffle">
+                </S.PlayerBtnRepeatSvg>
+              </S.PlayerBtnRepeat>
+              <S.PlayerBtnShuffle>
+                <S.PlayerBtnShuffleSvg className="_btn-icon" alt="shuffle">
                   <use xlinkHref={`${SpriteIkon}#icon-shuffle`} />
-                </svg>
-              </div>
-            </div>
+                </S.PlayerBtnShuffleSvg>
+              </S.PlayerBtnShuffle>
+            </S.PlayerControls>
 
-            <div className="player__track-play track-play">
-              <div className="track-play__contain">
-                <div className="track-play__image">
-                  <svg className="track-play__svg" alt="music">
+            <S.PlayerTrackPlay>
+              <S.TrackPlayContain>
+                <S.TrackPlayImage>
+                  <S.TrackPlaySvg alt="music">
                     <use xlinkHref={`${SpriteIkon}#icon-note`} />
-                  </svg>
-                </div>
-                <div className="track-play__author">
+                  </S.TrackPlaySvg>
+                </S.TrackPlayImage>
+                <S.TrackPlayAuthor>
                   {isLoading ? (
                     <Skeleton
                       width={90}
@@ -61,12 +63,12 @@ function Bar() {
                       highlightColor="#444"
                     />
                   ) : (
-                    <a className="track-play__author-link" href="http://">
+                    <S.TrackPlayAuthorLink href="http://">
                       Ты та...
-                    </a>
+                    </S.TrackPlayAuthorLink>
                   )}
-                </div>
-                <div className="track-play__album">
+                </S.TrackPlayAuthor>
+                <S.TrackPlayAlbum>
                   {isLoading ? (
                     <Skeleton
                       width={90}
@@ -74,46 +76,45 @@ function Bar() {
                       highlightColor="#444"
                     />
                   ) : (
-                    <a className="track-play__album-link" href="http://">
+                    <S.TrackPlayAlbumLink href="http://">
                       Баста
-                    </a>
+                    </S.TrackPlayAlbumLink>
                   )}
-                </div>
-              </div>
+                </S.TrackPlayAlbum>
+              </S.TrackPlayContain>
 
-              <div className="track-play__like-dis">
-                <div className="track-play__like _btn-icon">
-                  <svg className="track-play__like-svg" alt="like">
+              <S.TrackPlayLikeDis>
+                <S.TrackPlayLike className="_btn-icon">
+                  <S.TrackPlayLikeSvg alt="like">
                     <use xlinkHref={`${SpriteIkon}#icon-like`} />
-                  </svg>
-                </div>
-                <div className="track-play__dislike _btn-icon">
-                  <svg className="track-play__dislike-svg" alt="dislike">
+                  </S.TrackPlayLikeSvg>
+                </S.TrackPlayLike>
+                <S.TrackPlayDislike className="_btn-icon">
+                  <S.TrackPlayDislikeSvg alt="dislike">
                     <use xlinkHref={`${SpriteIkon}#icon-dislike`} />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bar__volume-block volume">
-            <div className="volume__content">
-              <div className="volume__image">
-                <svg className="volume__svg" alt="volume">
+                  </S.TrackPlayDislikeSvg>
+                </S.TrackPlayDislike>
+              </S.TrackPlayLikeDis>
+            </S.PlayerTrackPlay>
+          </S.BarPlayer>
+          <S.BarVolumeBlock>
+            <S.VolumeContent>
+              <S.VolumeImage>
+                <S.VolumeSvg alt="volume">
                   <use xlinkHref={`${SpriteIkon}#icon-volume`} />
-                </svg>
-              </div>
-              <div className="volume__progress _btn">
-                <input
-                  className="volume__progress-line _btn"
+                </S.VolumeSvg>
+              </S.VolumeImage>
+              <S.VolumeProgress>
+                <S.VolumeProgressLine
                   type="range"
                   name="range"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </S.VolumeProgress>
+            </S.VolumeContent>
+          </S.BarVolumeBlock>
+        </S.BarPlayerBlock>
+      </S.BarContent>
+    </S.Bar>
   )
 }
 
