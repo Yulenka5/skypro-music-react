@@ -46,7 +46,7 @@ setActiveFilter(activeFilter === newFilter ? null : newFilter);
             <S.CenterblockContent>
               <S.ContentTitle className="playlist-title">
                 <S.ContentTitleCol className="col01">Трек</S.ContentTitleCol>
-                <S.ContentTitleCol className="col02">ИСПОЛНИТЕЛЬ</S.ContentTitleCol>
+                <S.ContentTitleCol2 className="col02">ИСПОЛНИТЕЛЬ</S.ContentTitleCol2>
                 <S.ContentTitleCol className="col03">АЛЬБОМ</S.ContentTitleCol>
                 <S.ContentTitleCol className="col04">
                   <S.PlaylistTitleSvg alt="time">

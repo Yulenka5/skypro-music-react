@@ -88,6 +88,7 @@ margin-bottom: 45px;
 export const CenterblockFilter = styled.div`
 display: -webkit-box;
 display: -ms-flexbox;
+gap: 10px;
 display: flex;
 -webkit-box-orient: horizontal;
 -webkit-box-direction: normal;
@@ -138,6 +139,10 @@ line-height: 24px;
 letter-spacing: 2px;
 color: #696969;
 text-transform: uppercase;
+width: 447px;
+`
+export const ContentTitleCol2 = styled(ContentTitleCol)`
+  width: 321px;
 `
 export const PlaylistTitleSvg = styled.svg`
 width: 12px;

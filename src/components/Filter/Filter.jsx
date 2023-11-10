@@ -1,4 +1,4 @@
-import * as S from './FilerStyles';
+import * as S from './FilerStyles'
 
 export const perfomer = [
   {
@@ -65,20 +65,22 @@ export const genre = [
   },
 ]
 
-function Filter ({ filterName, isOpened, filterList, action }) {
+function Filter({ filterName, isOpened, filterList, action }) {
   return (
     <div onClick={action}>
-      <S.FilterButton className="_btn-text">{filterName}</S.FilterButton>
+      <S.FilterButton>{filterName}</S.FilterButton>
       {isOpened && (
-        <div>
-          {filterList.map((item) => {
-            return (
-              <S.FilterText key={item.id}>
-                <>{item.name}</>
-              </S.FilterText>
-            )
-          })}
-        </div>
+        <S.FilterBlock>
+          <S.FilterContent>
+            {filterList.map((item) => {
+              return (
+                <S.FilterText key={item.id}>
+                  <>{item.name}</>
+                </S.FilterText>
+              )
+            })}
+          </S.FilterContent>
+        </S.FilterBlock>
       )}
     </div>
   )
