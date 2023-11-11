@@ -21,38 +21,26 @@ function Bar() {
           <S.BarPlayer>
             <S.PlayerControls>
               <S.PlayerBtnPrev>
-                <S.PlayerBtnPrevSvg alt="prev">
-                  <use xlinkHref={`${SpriteIkon}#icon-prev`} />
-                </S.PlayerBtnPrevSvg>
+                <S.PrevSvg />
               </S.PlayerBtnPrev>
               <S.PlayerBtnPlay>
-                <S.PlayerBtnPlaySvg alt="play">
-                  <use xlinkHref={`${SpriteIkon}#icon-play`} />
-                </S.PlayerBtnPlaySvg>
+                <S.PlaySvg />
               </S.PlayerBtnPlay>
               <S.PlayerBtnNext>
-                <S.PlayerBtnNextSvg alt="next">
-                  <use xlinkHref={`${SpriteIkon}#icon-next`} />
-                </S.PlayerBtnNextSvg>
+                <S.NextSvg />
               </S.PlayerBtnNext>
               <S.PlayerBtnRepeat>
-                <S.PlayerBtnRepeatSvg alt="repeat">
-                  <use xlinkHref={`${SpriteIkon}#icon-repeat`} />
-                </S.PlayerBtnRepeatSvg>
+                <S.RepeatSvg />
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle>
-                <S.PlayerBtnShuffleSvg alt="shuffle">
-                  <use xlinkHref={`${SpriteIkon}#icon-shuffle`} />
-                </S.PlayerBtnShuffleSvg>
+                <S.ShuffleSvg />
               </S.PlayerBtnShuffle>
             </S.PlayerControls>
 
             <S.PlayerTrackPlay>
               <S.TrackPlayContain>
                 <S.TrackPlayImage>
-                  <S.TrackPlaySvg alt="music">
-                    <use xlinkHref={`${SpriteIkon}#icon-note`} />
-                  </S.TrackPlaySvg>
+                  <S.NoteSvg/>
                 </S.TrackPlayImage>
                 <S.TrackPlayAuthor>
                   {isLoading ? (
@@ -84,14 +72,10 @@ function Bar() {
 
               <S.TrackPlayLikeDis>
                 <S.TrackPlayLike>
-                  <S.TrackPlayLikeSvg alt="like">
-                    <use xlinkHref={`${SpriteIkon}#icon-like`} />
-                  </S.TrackPlayLikeSvg>
+                  <S.PlayLikeSvg />
                 </S.TrackPlayLike>
                 <S.TrackPlayDislike>
-                  <S.TrackPlayDislikeSvg alt="dislike">
-                    <use xlinkHref={`${SpriteIkon}#icon-dislike`} />
-                  </S.TrackPlayDislikeSvg>
+                  <S.PlayDisLikeSvg />
                 </S.TrackPlayDislike>
               </S.TrackPlayLikeDis>
             </S.PlayerTrackPlay>
@@ -99,9 +83,7 @@ function Bar() {
           <S.BarVolumeBlock>
             <S.VolumeContent>
               <S.VolumeImage>
-                <S.VolumeSvg alt="volume">
-                  <use xlinkHref={`${SpriteIkon}#icon-volume`} />
-                </S.VolumeSvg>
+                <S.VolumesSvg />
               </S.VolumeImage>
               <S.VolumeProgress>
                 <S.VolumeProgressLine type="range" name="range" />

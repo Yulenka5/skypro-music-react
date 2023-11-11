@@ -11,8 +11,12 @@ export const FilterButton = styled.button`
   background: #181818;
   color: #ffffff;
   &:hover {
-    color: #9a48f1;
-    border: 1px solid #9a48f1;
+    color: #D9B6FF;
+    border: 1px solid #D9B6FF;
+  }
+  &:active {
+    color: #AD61FF;
+    border: 1px solid #AD61FF;
   }
 `
 export const FilterContent = styled.ul`
@@ -43,7 +47,6 @@ export const FilterText = styled.li`
 `
 export const FilterBlock = styled.div`
   position: absolute;
-  font-family: 'StratosSkyeng';
   padding: 34px;
   border-radius: 12px;
   background: #313131;

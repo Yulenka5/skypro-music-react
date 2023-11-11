@@ -27,9 +27,7 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.TrackTitleSvg alt="music">
-                  <use xlinkHref={`${SpriteIcon}#icon-note`}></use>
-                </S.TrackTitleSvg>
+              <S.NoteSvg/>
               )}
             </S.TrackTitleImage>
             <S.TrackTitleText>
