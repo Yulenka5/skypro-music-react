@@ -1,39 +1,39 @@
 import "../Login/Login";
 import LogoModal from "../../assets/img/logo_modal";
-
+import * as S from './LoginStyle';
 
 function Login () {
-    <div className="wrapper">
-      <div className="container-enter">
-        <div className="modal__block">
-          <form className="modal__form-login" action="#">
+    <S.Wrapper>
+      <S.ContainerEnter>
+        <S.ModalBlock>
+          <S.ModalFormLogin action="#">
             <a href="../">
-              <div className="modal__logo">
-                <img src={LogoModal} alt="logo" />
-              </div>
+              <S.ModalLogo>
+                <img src={LogoModal} alt="logo"/>
+              </S.ModalLogo>
             </a>
-            <input
-              className="modal__input login"
+            <S.ModalInput
+              className="login"
               type="text"
               name="login"
               placeholder="Почта"
             />
-            <input
-              className="modal__input password"
+            <S.ModalInput
+              className="password"
               type="password"
               name="password"
               placeholder="Пароль"
             />
-            <button className="modal__btn-enter">
+            <S.ModalBtnEnter>
               <a href="../index.html">Войти</a>
-            </button>
-            <button className="modal__btn-signup">
+            </S.ModalBtnEnter>
+            <S.ModalBtnSignUp>
               <a href="signup.html">Зарегистрироваться</a>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+            </S.ModalBtnSignUp>
+          </S.ModalFormLogin>
+        </S.ModalBlock>
+      </S.ContainerEnter>
+    </S.Wrapper>
 }
 
 export default Login;
