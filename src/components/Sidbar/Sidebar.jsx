@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import * as S from './SidebarStyles';
-import SpriteIcon from '../../assets/img/icon/sprite.svg';
-import PlayList_1 from '../../assets/img/playlist01.png';
-import PlayList_2 from '../../assets/img/playlist02.png';
-import PlayList_3 from '../../assets/img/playlist03.png';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-
+import { useEffect, useState } from 'react'
+import * as S from './Sidebar.Styles'
+import SpriteIcon from '../../assets/img/icon/sprite.svg'
+import PlayList_1 from '../../assets/img/playlist01.png'
+import PlayList_2 from '../../assets/img/playlist02.png'
+import PlayList_3 from '../../assets/img/playlist03.png'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function Sidebar() {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,7 +17,7 @@ function Sidebar() {
   }, [])
 
   return (
-    <S.MainSidebar className="sidebar">
+    <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
         <S.SidebarIcon>
@@ -39,10 +38,7 @@ function Sidebar() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.SidebarImg
-                  src={PlayList_1}
-                  alt="day's playlist"
-                />
+                <S.SidebarImg src={PlayList_1} alt="day's playlist" />
               )}
             </S.SidebarLink>
           </S.SidebarItem>
@@ -56,10 +52,7 @@ function Sidebar() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.SidebarImg
-                  src={PlayList_2}
-                  alt="day's playlist"
-                />
+                <S.SidebarImg src={PlayList_2} alt="day's playlist" />
               )}
             </S.SidebarLink>
           </S.SidebarItem>
@@ -73,10 +66,7 @@ function Sidebar() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.SidebarImg
-                  src={PlayList_3}
-                  alt="day's playlist"
-                />
+                <S.SidebarImg src={PlayList_3} alt="day's playlist" />
               )}
             </S.SidebarLink>
           </S.SidebarItem>

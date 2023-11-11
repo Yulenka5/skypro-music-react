@@ -74,6 +74,16 @@ margin-right: 23px;
 export const PlayerBtnPrevSvg = styled.svg`
 width: 15px;
 height: 14px;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const PlayerBtnPlay = styled(PlayerBtn)`
 margin-right: 23px;
@@ -82,6 +92,16 @@ export const PlayerBtnPlaySvg = styled.svg`
 width: 22px;
 height: 20px;
 fill: #d9d9d9;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const PlayerBtnNext = styled(PlayerBtn)`
 margin-right: 28px;
@@ -92,6 +112,16 @@ width: 15px;
 height: 14px;
 fill: inherit;
 stroke: #d9d9d9;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const PlayerBtnRepeat = styled(PlayerBtn)`
 margin-right: 24px;
@@ -101,6 +131,16 @@ width: 18px;
 height: 12px;
 fill: transparent;
 stroke: #696969;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const PlayerBtnShuffle = styled(PlayerBtn)`
 display: -webkit-box;
@@ -115,6 +155,16 @@ width: 19px;
 height: 12px;
 fill: transparent;
 stroke: #696969;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const PlayerTrackPlay = styled.div`
 display: -webkit-box;
@@ -160,6 +210,16 @@ width: 18px;
 height: 17px;
 fill: transparent;
 stroke: #4e4e4e;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const TrackPlayAuthor = styled.div`
 -ms-grid-row: 1;
@@ -203,22 +263,52 @@ margin-left: 26%;
 `
 export const TrackPlayLike = styled.div`
 padding: 5px;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
 `
 export const TrackPlayLikeSvg = styled.svg`
 width: 14px;
 height: 12px;
 fill: transparent;
 stroke: #696969;
+&:active{
+  fill: #696969;
+  stroke: #ffffff;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const TrackPlayDislike = styled.div`
 padding: 5px;
 margin-left: 28.5px;
+&:hover svg {
+  fill: transparent;
+  stroke: #acacac;
+  cursor: pointer;
+}
 `
 export const TrackPlayDislikeSvg = styled.svg`
 width: 14.34px;
 height: 13px;
 fill: transparent;
 stroke: #696969;
+&:active{
+  fill: #696969;
+  stroke: #ffffff;
+  cursor: pointer;
+}
+&:active svg {
+  fill: transparent;
+  stroke: #ffffff;
+  cursor: pointer;
+}
 `
 export const BarVolumeBlock = styled.div`
 width: auto;

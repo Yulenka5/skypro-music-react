@@ -1,23 +1,22 @@
-import "../src/App.css";
-import Bar from "./components/Bar/Bar";
-import Menu from "./components/Menu/Menu";
-import Sidebar from "./components/Sidbar/Sidebar";
-import TrackList from "./components/TrackList/TrackList";
+import Bar from './components/Bar/Bar'
+import Menu from './components/Menu/Menu'
+import Sidebar from './components/Sidbar/Sidebar'
+import TrackList from './components/TrackList/TrackList'
+import * as S from './AppMain.Styles'
 
 function App() {
-    return (
-        <div className="wrapper">
-      <div className="container">
-        <main className="main">
-            <Menu />
-            <TrackList />
-            <Sidebar />
-        </main>
+  return (
+    <S.Wrapper>
+      <S.Conteiner>
+        <S.Main>
+          <Menu />
+          <TrackList />
+          <Sidebar />
+        </S.Main>
         <Bar />
-        <footer className="footer"></footer>
-        </div>
-        </div>
-        
-    );
+        <S.Footer></S.Footer>
+      </S.Conteiner>
+    </S.Wrapper>
+  )
 }
-export default App;
+export default App

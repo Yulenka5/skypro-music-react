@@ -1,4 +1,4 @@
-import * as S from './FilerStyles'
+import * as S from './Filer.Styles'
 
 export const perfomer = [
   {

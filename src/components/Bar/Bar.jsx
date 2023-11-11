@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
-import SpriteIkon from '../../assets/img/icon/sprite.svg';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-import * as S from './BarStyles';
-
+import { useEffect, useState } from 'react'
+import SpriteIkon from '../../assets/img/icon/sprite.svg'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import * as S from './Bar.Styles'
 
 function Bar() {
   const [isLoading, setIsLoading] = useState(true)
@@ -17,32 +16,32 @@ function Bar() {
   return (
     <S.Bar>
       <S.BarContent>
-        <S.BarPlayerProgress/>
+        <S.BarPlayerProgress />
         <S.BarPlayerBlock>
-          <S.BarPlayer className="player">
+          <S.BarPlayer>
             <S.PlayerControls>
               <S.PlayerBtnPrev>
-                <S.PlayerBtnPrevSvg className="_btn-icon" alt="prev">
-                  <use xlinkHref={`${SpriteIkon}#icon-prev`}/>
+                <S.PlayerBtnPrevSvg alt="prev">
+                  <use xlinkHref={`${SpriteIkon}#icon-prev`} />
                 </S.PlayerBtnPrevSvg>
               </S.PlayerBtnPrev>
-              <S.PlayerBtnPlay className="_btn">
-                <S.PlayerBtnPlaySvg className="_btn-icon" alt="play">
-                  <use xlinkHref={`${SpriteIkon}#icon-play"`} />
+              <S.PlayerBtnPlay>
+                <S.PlayerBtnPlaySvg alt="play">
+                  <use xlinkHref={`${SpriteIkon}#icon-play`} />
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>
               <S.PlayerBtnNext>
-                <S.PlayerBtnNextSvg className="_btn-icon" alt="next">
+                <S.PlayerBtnNextSvg alt="next">
                   <use xlinkHref={`${SpriteIkon}#icon-next`} />
                 </S.PlayerBtnNextSvg>
               </S.PlayerBtnNext>
               <S.PlayerBtnRepeat>
-                <S.PlayerBtnRepeatSvg className="_btn-icon" alt="repeat">
+                <S.PlayerBtnRepeatSvg alt="repeat">
                   <use xlinkHref={`${SpriteIkon}#icon-repeat`} />
                 </S.PlayerBtnRepeatSvg>
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle>
-                <S.PlayerBtnShuffleSvg className="_btn-icon" alt="shuffle">
+                <S.PlayerBtnShuffleSvg alt="shuffle">
                   <use xlinkHref={`${SpriteIkon}#icon-shuffle`} />
                 </S.PlayerBtnShuffleSvg>
               </S.PlayerBtnShuffle>
@@ -84,12 +83,12 @@ function Bar() {
               </S.TrackPlayContain>
 
               <S.TrackPlayLikeDis>
-                <S.TrackPlayLike className="_btn-icon">
+                <S.TrackPlayLike>
                   <S.TrackPlayLikeSvg alt="like">
                     <use xlinkHref={`${SpriteIkon}#icon-like`} />
                   </S.TrackPlayLikeSvg>
                 </S.TrackPlayLike>
-                <S.TrackPlayDislike className="_btn-icon">
+                <S.TrackPlayDislike>
                   <S.TrackPlayDislikeSvg alt="dislike">
                     <use xlinkHref={`${SpriteIkon}#icon-dislike`} />
                   </S.TrackPlayDislikeSvg>
@@ -105,10 +104,7 @@ function Bar() {
                 </S.VolumeSvg>
               </S.VolumeImage>
               <S.VolumeProgress>
-                <S.VolumeProgressLine
-                  type="range"
-                  name="range"
-                />
+                <S.VolumeProgressLine type="range" name="range" />
               </S.VolumeProgress>
             </S.VolumeContent>
           </S.BarVolumeBlock>
