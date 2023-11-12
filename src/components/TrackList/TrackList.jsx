@@ -1,5 +1,4 @@
 import Track from '../Track/Track'
-import SpriteIcon from '../../assets/img/icon/sprite.svg'
 import Filter, { perfomer, year, genre } from '../Filter/Filter'
 import { useState } from 'react'
 import * as S from './TrackList.Styles'
@@ -13,9 +12,7 @@ function TrackList() {
   return (
     <S.MainCenterblock className="centerblock">
       <S.CenterblockSearch className="search">
-        <S.SearchSvg>
-          <use xlinkHref={`${SpriteIcon}#icon-search`}></use>
-        </S.SearchSvg>
+        <S.SearchSvg/>
         <S.SearchText type="search" placeholder="Поиск" name="search" />
       </S.CenterblockSearch>
       <S.CenterblockH2>Треки</S.CenterblockH2>
@@ -46,9 +43,7 @@ function TrackList() {
           <S.ContentTitleCol2>ИСПОЛНИТЕЛЬ</S.ContentTitleCol2>
           <S.ContentTitleCol3>АЛЬБОМ</S.ContentTitleCol3>
           <S.ContentTitleCol4>
-            <S.PlaylistTitleSvg alt="time">
-              <use xlinkHref={`${SpriteIcon}#icon-watch`}></use>
-            </S.PlaylistTitleSvg>
+            <S.WatchSvg />
           </S.ContentTitleCol4>
         </S.ContentTitle>
       </S.CenterblockContent>

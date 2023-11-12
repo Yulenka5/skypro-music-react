@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ReactComponent as LogoutIcon } from '../../assets/img/icon/logout.svg'
+
 
 export const MainSidebar = styled.div`
 max-width: 418px;
@@ -28,12 +30,13 @@ line-height: 24px;
 color: #ffffff;
 margin-right: 16px;
 `
-export const SidebarIcon = styled.div`
-width: 43px;
-height: 43px;
-background-color: #313131;
-border-radius: 50%;
-cursor: pointer;
+export const LogoutSvg = styled(LogoutIcon)`
+  cursor: pointer;
+  path {
+    stroke: white;
+     stroke-linecap: round;
+      stroke-linejoin: round;
+  }
 `
 export const SidebarBlock = styled.div`
 height: 100%;

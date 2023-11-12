@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { ReactComponent as SearchIcon } from '../../assets/img/icon/search.svg'
+import { ReactComponent as WatchIcon } from '../../assets/img/icon/watch.svg'
 
 export const MainCenterblock = styled.div`
   width: auto;
@@ -22,12 +24,10 @@ export const CenterblockSearch = styled.div`
   -ms-flex-align: center;
   align-items: center;
 `
-export const SearchSvg = styled.svg`
-  width: 17px;
-  height: 17px;
-  margin-right: 5px;
-  stroke: #ffffff;
-  fill: transparent;
+export const SearchSvg = styled(SearchIcon)`
+  path {
+    stroke: #ffffff;
+  }
 `
 export const SearchText = styled.input`
   -webkit-box-flex: 100;
@@ -152,9 +152,8 @@ export const ContentTitleCol4 = styled(ContentTitleCol)`
   width: 60px;
   text-align: end;
 `
-export const PlaylistTitleSvg = styled.svg`
-  width: 12px;
-  height: 12px;
-  fill: transparent;
-  stroke: #696969;
+export const WatchSvg = styled(WatchIcon)`
+  path {
+    stroke: #696969;
+  }
 `

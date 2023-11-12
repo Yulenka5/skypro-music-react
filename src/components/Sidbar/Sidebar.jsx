@@ -20,11 +20,7 @@ function Sidebar() {
     <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-        <S.SidebarIcon>
-          <svg alt="logout">
-            <use xlinkHref={`${SpriteIcon}#logout`}></use>
-          </svg>
-        </S.SidebarIcon>
+            <S.LogoutSvg/>         
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
