@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
-import SpriteIkon from '../../assets/img/icon/sprite.svg';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-import * as S from './BarStyles';
-
+import { useEffect, useState } from 'react'
+import SpriteIkon from '../../assets/img/icon/sprite.svg'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import * as S from './Bar.Styles'
 
 function Bar() {
   const [isLoading, setIsLoading] = useState(true)
@@ -17,43 +16,31 @@ function Bar() {
   return (
     <S.Bar>
       <S.BarContent>
-        <S.BarPlayerProgress/>
+        <S.BarPlayerProgress />
         <S.BarPlayerBlock>
-          <S.BarPlayer className="player">
+          <S.BarPlayer>
             <S.PlayerControls>
               <S.PlayerBtnPrev>
-                <S.PlayerBtnPrevSvg className="_btn-icon" alt="prev">
-                  <use xlinkHref={`${SpriteIkon}#icon-prev`}/>
-                </S.PlayerBtnPrevSvg>
+                <S.PrevSvg />
               </S.PlayerBtnPrev>
-              <S.PlayerBtnPlay className="_btn">
-                <S.PlayerBtnPlaySvg className="_btn-icon" alt="play">
-                  <use xlinkHref={`${SpriteIkon}#icon-play"`} />
-                </S.PlayerBtnPlaySvg>
+              <S.PlayerBtnPlay>
+                <S.PlaySvg />
               </S.PlayerBtnPlay>
               <S.PlayerBtnNext>
-                <S.PlayerBtnNextSvg className="_btn-icon" alt="next">
-                  <use xlinkHref={`${SpriteIkon}#icon-next`} />
-                </S.PlayerBtnNextSvg>
+                <S.NextSvg />
               </S.PlayerBtnNext>
               <S.PlayerBtnRepeat>
-                <S.PlayerBtnRepeatSvg className="_btn-icon" alt="repeat">
-                  <use xlinkHref={`${SpriteIkon}#icon-repeat`} />
-                </S.PlayerBtnRepeatSvg>
+                <S.RepeatSvg />
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle>
-                <S.PlayerBtnShuffleSvg className="_btn-icon" alt="shuffle">
-                  <use xlinkHref={`${SpriteIkon}#icon-shuffle`} />
-                </S.PlayerBtnShuffleSvg>
+                <S.ShuffleSvg />
               </S.PlayerBtnShuffle>
             </S.PlayerControls>
 
             <S.PlayerTrackPlay>
               <S.TrackPlayContain>
                 <S.TrackPlayImage>
-                  <S.TrackPlaySvg alt="music">
-                    <use xlinkHref={`${SpriteIkon}#icon-note`} />
-                  </S.TrackPlaySvg>
+                  <S.NoteSvg/>
                 </S.TrackPlayImage>
                 <S.TrackPlayAuthor>
                   {isLoading ? (
@@ -84,15 +71,11 @@ function Bar() {
               </S.TrackPlayContain>
 
               <S.TrackPlayLikeDis>
-                <S.TrackPlayLike className="_btn-icon">
-                  <S.TrackPlayLikeSvg alt="like">
-                    <use xlinkHref={`${SpriteIkon}#icon-like`} />
-                  </S.TrackPlayLikeSvg>
+                <S.TrackPlayLike>
+                  <S.PlayLikeSvg />
                 </S.TrackPlayLike>
-                <S.TrackPlayDislike className="_btn-icon">
-                  <S.TrackPlayDislikeSvg alt="dislike">
-                    <use xlinkHref={`${SpriteIkon}#icon-dislike`} />
-                  </S.TrackPlayDislikeSvg>
+                <S.TrackPlayDislike>
+                  <S.PlayDisLikeSvg />
                 </S.TrackPlayDislike>
               </S.TrackPlayLikeDis>
             </S.PlayerTrackPlay>
@@ -100,15 +83,10 @@ function Bar() {
           <S.BarVolumeBlock>
             <S.VolumeContent>
               <S.VolumeImage>
-                <S.VolumeSvg alt="volume">
-                  <use xlinkHref={`${SpriteIkon}#icon-volume`} />
-                </S.VolumeSvg>
+                <S.VolumesSvg />
               </S.VolumeImage>
               <S.VolumeProgress>
-                <S.VolumeProgressLine
-                  type="range"
-                  name="range"
-                />
+                <S.VolumeProgressLine type="range" name="range" />
               </S.VolumeProgress>
             </S.VolumeContent>
           </S.BarVolumeBlock>

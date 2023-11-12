@@ -11,8 +11,12 @@ export const FilterButton = styled.button`
   background: #181818;
   color: #ffffff;
   &:hover {
-    color: #9a48f1;
-    border: 1px solid #9a48f1;
+    color: #D9B6FF;
+    border: 1px solid #D9B6FF;
+  }
+  &:active {
+    color: #AD61FF;
+    border: 1px solid #AD61FF;
   }
 `
 export const FilterContent = styled.ul`
@@ -25,25 +29,31 @@ export const FilterContent = styled.ul`
 
 export const FilterText = styled.li`
   font-variant-numeric: lining-nums proportional-nums;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 120% */
   &:hover {
+    border-color: #d9b6ff;
+    color: #d9b6ff;
+    cursor: pointer;
+  }
+  &:active {
     text-decoration-line: underline;
     color: #b672ff;
+    border-color: #ad61ff;
+    cursor: pointer;
   }
 `
 export const FilterBlock = styled.div`
   position: absolute;
-  font-family: StratosSkyeng;
   padding: 34px;
   border-radius: 12px;
   background: #313131;
   gap: 10px;
   display: flex;
   flex-direction: column;
-  top: 43%;
+  top: 29%;
   max-width: 220px;
   overflow: auto;
   height: 237px;

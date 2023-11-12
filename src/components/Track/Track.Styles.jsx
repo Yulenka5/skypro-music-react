@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
+
 
 export const ContentPlaylist = styled.div`
 display: -webkit-box;
@@ -59,11 +61,21 @@ align-items: center;
 justify-content: center;
 margin-right: 17px;
 `
-export const TrackTitleSvg = styled.svg`
-width: 18px;
-height: 17px;
-fill: transparent;
-stroke: #4e4e4e;
+export const NoteSvg = styled(NoteIcon)`
+  width: 18px;
+  height: 17px;
+  fill: transparent;
+  stroke: #4e4e4e;
+  &:hover svg {
+    fill: transparent;
+    stroke: #acacac;
+    cursor: pointer;
+  }
+  &:active svg {
+    fill: transparent;
+    stroke: #ffffff;
+    cursor: pointer;
+  }
 `
 export const TrackTitleText = styled.div``
 
