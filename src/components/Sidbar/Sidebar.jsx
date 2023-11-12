@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as S from './Sidebar.Styles'
-import SpriteIcon from '../../assets/img/icon/sprite.svg'
 import PlayList_1 from '../../assets/img/playlist01.png'
 import PlayList_2 from '../../assets/img/playlist02.png'
 import PlayList_3 from '../../assets/img/playlist03.png'
@@ -20,11 +19,7 @@ function Sidebar() {
     <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-        <S.SidebarIcon>
-          <svg alt="logout">
-            <use xlinkHref={`${SpriteIcon}#logout`}></use>
-          </svg>
-        </S.SidebarIcon>
+            <S.LogoutSvg/>         
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
