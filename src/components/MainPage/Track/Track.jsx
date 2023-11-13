@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import SpriteIcon from '../../assets/img/icon/sprite.svg'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Track.Styles'
@@ -61,9 +60,7 @@ function Track() {
             )}
           </S.TrackAlbum>
           <S.TrackTime>
-            <S.TrackTimeSvg alt="time">
-              <use xlinkHref={`${SpriteIcon}#icon-like`}></use>
-            </S.TrackTimeSvg>
+            <S.TrackTimeSvg/>
             <S.TrackTimeText>4:44</S.TrackTimeText>
           </S.TrackTime>
         </S.PlaylistTrack>

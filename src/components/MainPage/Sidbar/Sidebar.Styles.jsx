@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as LogoutIcon } from '../../assets/img/icon/logout.svg'
+import { ReactComponent as LogoutIcon } from '../../../assets/img/icon/logout.svg'
 
 
 export const MainSidebar = styled.div`

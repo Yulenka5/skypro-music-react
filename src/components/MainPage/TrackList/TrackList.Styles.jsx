@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ReactComponent as SearchIcon } from '../../assets/img/icon/search.svg'
-import { ReactComponent as WatchIcon } from '../../assets/img/icon/watch.svg'
+import { ReactComponent as SearchIcon } from '../../../assets/img/icon/search.svg'
+import { ReactComponent as WatchIcon } from '../../../assets/img/icon/watch.svg'
 
 export const MainCenterblock = styled.div`
   width: auto;

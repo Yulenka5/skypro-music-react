@@ -1,5 +1,4 @@
-import '../Registr/Registr'
-import LogoModal from '../../assets/img/logo_modal'
+import logoModalIcon from '../../assets/img/logo_modal.png'
 import * as S from './Registr.Styles'
 
 function Registr() {
@@ -7,11 +6,11 @@ function Registr() {
     <S.ContainerSingup>
       <S.ModlaBlock>
         <S.ModalFormLogin>
-          <a href="../">
+          <S.ModalFormLink>
             <S.ModalLogo>
-              <img src={LogoModal} alt="logo" />
+            <img src={logoModalIcon} alt="logo"/>
             </S.ModalLogo>
-          </a>
+          </S.ModalFormLink>
           <S.ModalInput
             className="login"
             type="text"

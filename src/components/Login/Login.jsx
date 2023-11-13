@@ -1,17 +1,16 @@
-import '../Login/Login'
-import LogoModal from '../../assets/img/logo_modal'
 import * as S from './Login.Styles'
+import logoModalIcon from '../../assets/img/logo_modal.png'
 
 function Login() {
   <S.Wrapper>
     <S.ContainerEnter>
       <S.ModalBlock>
         <S.ModalFormLogin action="#">
-          <a href="../">
+          <S.ModalFormLink>
             <S.ModalLogo>
-              <img src={LogoModal} alt="logo" />
+            <img src={logoModalIcon} alt="logo"/>
             </S.ModalLogo>
-          </a>
+          </S.ModalFormLink>
           <S.ModalInput
             className="login"
             type="text"

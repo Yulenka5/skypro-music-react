@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import * as S from './Sidebar.Styles'
-import PlayList_1 from '../../assets/img/playlist01.png'
-import PlayList_2 from '../../assets/img/playlist02.png'
-import PlayList_3 from '../../assets/img/playlist03.png'
+import PlayList_1 from '../../../assets/img/playlist01.png'
+import PlayList_2 from '../../../assets/img/playlist02.png'
+import PlayList_3 from '../../../assets/img/playlist03.png'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 

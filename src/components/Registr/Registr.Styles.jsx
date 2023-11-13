@@ -43,16 +43,13 @@ export const ModalFormLogin = styled.form`
     margin-bottom: 30px;
   }
 `;
+export const ModalFormLink = styled.a``
 
 export const ModalLogo = styled.div`
   width: 140px;
   height: 21px;
   margin-bottom: 34px;
   background-color: transparent;
-  & img {
-    width: 140px;
-    height: auto;
-  }
 `;
 
 export const ModalInput = styled.input`

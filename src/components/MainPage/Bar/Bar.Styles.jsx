@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { ReactComponent as PrevIcon } from '../../assets/img/icon/prev.svg'
-import { ReactComponent as PlayIcon } from '../../assets/img/icon/play.svg'
-import { ReactComponent as NextIcon } from '../../assets/img/icon/next.svg'
-import { ReactComponent as RepeatIcon } from '../../assets/img/icon/repeat.svg'
-import { ReactComponent as ShuffleIcon } from '../../assets/img/icon/shuffle.svg'
-import { ReactComponent as PlayLikeIcon } from '../../assets/img/icon/like.svg'
-import { ReactComponent as PlayDisLikeIcon } from '../../assets/img/icon/dislike.svg'
-import { ReactComponent as VolumeIcon } from '../../assets/img/icon/volume.svg'
-import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
+import { ReactComponent as PrevIcon } from '../../../assets/img/icon/prev.svg'
+import { ReactComponent as PlayIcon } from '../../../assets/img/icon/play.svg'
+import { ReactComponent as NextIcon } from '../../../assets/img/icon/next.svg'
+import { ReactComponent as RepeatIcon } from '../../../assets/img/icon/repeat.svg'
+import { ReactComponent as ShuffleIcon } from '../../../assets/img/icon/shuffle.svg'
+import { ReactComponent as PlayLikeIcon } from '../../../assets/img/icon/like.svg'
+import { ReactComponent as PlayDisLikeIcon } from '../../../assets/img/icon/dislike.svg'
+import { ReactComponent as VolumeIcon } from '../../../assets/img/icon/volume.svg'
+import { ReactComponent as NoteIcon } from '../../../assets/img/icon/note.svg'
 
 export const PrevSvg = styled(PrevIcon)`
   cursor: pointer;
