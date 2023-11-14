@@ -1,4 +1,4 @@
-import Bar from './components/MainPage/Bar/Bar'
+import Bar from './components/Bar/Bar'
 import { RoutesApp } from './Routes'
 
 function App() {

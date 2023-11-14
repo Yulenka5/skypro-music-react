@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as NoteIcon } from '../../../assets/img/icon/note.svg'
-import { ReactComponent as LikeIcon } from '../../../assets/img/icon/like.svg'
+import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
+import { ReactComponent as LikeIcon } from '../../assets/img/icon/like.svg'
 
 
 export const ContentPlaylist = styled.div`
