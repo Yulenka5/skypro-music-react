@@ -2,6 +2,7 @@ import Track from '../Track/Track'
 import Filter, { perfomer, year, genre } from '../Filter/Filter'
 import { useState } from 'react'
 import * as S from './TrackList.Styles'
+import { SearchBar } from './SearchBar'
 
 function TrackList() {
   const [activeFilter, setActiveFilter] = useState(null)
@@ -11,10 +12,7 @@ function TrackList() {
   }
   return (
     <S.MainCenterblock className="centerblock">
-      <S.CenterblockSearch className="search">
-        <S.SearchSvg/>
-        <S.SearchText type="search" placeholder="Поиск" name="search" />
-      </S.CenterblockSearch>
+      <SearchBar />
       <S.CenterblockH2>Треки</S.CenterblockH2>
       <S.CenterblockFilter className="filter">
         <S.FilterTitle>Искать по:</S.FilterTitle>

@@ -19,12 +19,12 @@ function Sidebar() {
     <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-            <S.LogoutSvg/>         
+        <S.LogoutSvg />
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/6">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -38,7 +38,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/4">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -52,7 +52,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/5">
               {isLoading ? (
                 <Skeleton
                   width={250}

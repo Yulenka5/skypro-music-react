@@ -106,7 +106,7 @@ export const ModalBtnEnter = styled.button`
   height: 52px;
   color: white;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: StratosSkyeng, sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

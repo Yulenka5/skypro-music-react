@@ -37,7 +37,7 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.TrackTitleLink href="http://">
+                <S.TrackTitleLink>
                   Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
                 </S.TrackTitleLink>
               )}
@@ -47,14 +47,14 @@ function Track() {
             {isLoading ? (
               <Skeleton width={270} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+              <S.TrackAuthorLink>Nero</S.TrackAuthorLink>
             )}
           </S.TrackAuthor>
           <S.TrackAlbum>
             {isLoading ? (
               <Skeleton width={450} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAlbumLink href="http://">
+              <S.TrackAlbumLink>
                 Welcome Reality
               </S.TrackAlbumLink>
             )}

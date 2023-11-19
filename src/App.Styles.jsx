@@ -18,7 +18,7 @@ export const GlobalStyled = createGlobalStyle`
 a,
 a:visited {
   text-decoration: none;
-  font-family: "StratosSkyeng", sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
   cursor: pointer;
 }
 
@@ -31,20 +31,20 @@ ul li {
   list-style: none;
 }
 
-@font-face {
-  font-family: "StratosSkyeng";
-  src: local("StratosSkyeng"), local("StratosSkyeng"),
-    url("../src/assets/fonts/StratosSkyeng.woff2") format("woff2"),
-    url("../src/assets/fonts/StratosSkyeng.woff") format("woff");
+/* @font-face {
+  font-family: 'StratosSkyeng';
+  src: local('StratosSkyeng'), local('StratosSkyeng'),
+    url('./assets/fonts/StratosSkyeng.woff2') format('woff2'),
+    url('./assets/fonts/StratosSkyeng.woff');
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "StratosSkyeng", sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
   color: #ffffff;
 }
 `
