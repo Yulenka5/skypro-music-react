@@ -1,4 +1,4 @@
-import * as S from './Login.Styles'
+import * as S from './Logine.Styles'
 import logoModalIcon from '../../assets/img/logo_modal.png'
 
 function Login() {

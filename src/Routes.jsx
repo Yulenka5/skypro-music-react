@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import Login from './pages/login/Login'
-import Registr from './pages/registr/Registr'
+import Login from './pages/login/Logine'
+import Registr from './pages/registr/Register'
 import MainPage from './pages/main/MainPage'
 import PlayOfDay from './pages/play-of-day/Category'
 import { ProtectedRoute } from './protected-route/ProtectedRoute'
@@ -19,17 +19,17 @@ export function RoutesApp() {
         }
       />
       <Route
-        path="/Favorites"
+        path="/favorites"
         element={
           <ProtectedRoute>
             <MyPlaylist />
           </ProtectedRoute>
         }
       />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/Registr" element={<Registr />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registr" element={<Registr />} />
       <Route
-        path="/Category/:id"
+        path="/category/:id"
         element={
           <ProtectedRoute>
             <PlayOfDay />

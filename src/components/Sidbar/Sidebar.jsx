@@ -24,7 +24,7 @@ function Sidebar() {
       <S.SidebarBlock>
         <S.SidebarList>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/6">
+            <S.SidebarLink to="/Category/1">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -38,7 +38,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/4">
+            <S.SidebarLink to="/Category/2">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -52,7 +52,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/5">
+            <S.SidebarLink to="/Category/3">
               {isLoading ? (
                 <Skeleton
                   width={250}
