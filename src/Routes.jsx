@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import Login from './pages/login/Logine'
-import Registr from './pages/registr/Register'
+import Login from './pages/login/Login'
+import Registr from './pages/registr/Registr'
 import MainPage from './pages/main/MainPage'
 import PlayOfDay from './pages/play-of-day/Category'
 import { ProtectedRoute } from './protected-route/ProtectedRoute'

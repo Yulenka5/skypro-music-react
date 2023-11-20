@@ -1,5 +1,5 @@
 import logoModalIcon from '../../assets/img/logo_modal.png'
-import * as S from './Register.Styles'
+import * as S from './Registr.Styles'
 
 function Registr() {
   return (
