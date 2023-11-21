@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import * as S from './Sidebar.Styles'
-import PlayList_1 from '../../assets/img/playlist01.png'
-import PlayList_2 from '../../assets/img/playlist02.png'
-import PlayList_3 from '../../assets/img/playlist03.png'
+import PlayList_1 from '../../assets/img/class-music.png'
+import PlayList_2 from '../../assets/img/el-music.png'
+import PlayList_3 from '../../assets/img/rock.png'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -19,12 +19,12 @@ function Sidebar() {
     <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-            <S.LogoutSvg/>         
+        <S.LogoutSvg />
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/1">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -38,7 +38,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/2">
               {isLoading ? (
                 <Skeleton
                   width={250}
@@ -52,7 +52,7 @@ function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/Category/3">
               {isLoading ? (
                 <Skeleton
                   width={250}

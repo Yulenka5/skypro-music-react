@@ -1,27 +1,25 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   width: 100%;
   min-height: 100%;
   overflow: hidden;
-`;
-
-export const ContainerSingup = styled.div`
+  background-color: #383838;
+`
+export const ContainerEnter = styled.div`
   max-width: 100%;
   height: 100vh;
   margin: 0 auto;
   position: relative;
   background-color: rgba(0, 0, 0, 0.85);
-`;
-
-export const ModlaBlock = styled.div`
+`
+export const ModalBlock = styled.div`
   position: absolute;
   z-index: 2;
   left: calc(50% - (366px / 2));
   top: calc(50% - (439px / 2));
   opacity: 1;
-`;
-
+`
 export const ModalFormLogin = styled.form`
   width: 366px;
   height: 439px;
@@ -37,24 +35,21 @@ export const ModalFormLogin = styled.form`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 43px 44px 47px 40px;
+  padding: 43px 47px 47px 40px;
 
-  & input:first-child {
+  &input:first-child {
     margin-bottom: 30px;
   }
-`;
+`
+export const ModalFormLink = styled.a``
+  
 
 export const ModalLogo = styled.div`
   width: 140px;
   height: 21px;
   margin-bottom: 34px;
   background-color: transparent;
-  & img {
-    width: 140px;
-    height: auto;
-  }
-`;
-
+`
 export const ModalInput = styled.input`
   width: 278px;
   height: 34px;
@@ -105,14 +100,13 @@ export const ModalInput = styled.input`
     letter-spacing: -0.05px;
     color: #d0cece;
   }
-`;
-
-export const ModalBtnSingupEnt = styled.button`
+`
+export const ModalBtnEnter = styled.button`
   width: 278px;
-  height: 62px;
-  color: #fff;
+  height: 52px;
+  color: white;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: StratosSkyeng, sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -120,9 +114,9 @@ export const ModalBtnSingupEnt = styled.button`
   letter-spacing: -0.054px;
   background-color: #580ea2;
   border-radius: 6px;
-  margin-left: 4px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   border: none;
-  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,4 +146,62 @@ export const ModalBtnSingupEnt = styled.button`
     -ms-flex-pack: center;
     justify-content: center;
   }
-`;
+
+  &:hover {
+    background-color: #3f007d;
+  }
+
+  &:active {
+    background-color: #271a58;
+  }
+`
+export const ModalBtnSignUp = styled.button`
+  width: 278px;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #d0cece;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  & a {
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: #f4f5f6;
+  }
+
+  &:active {
+    background-color: #d9d9d9;
+  }
+`

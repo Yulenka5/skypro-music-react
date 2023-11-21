@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as LogoutIcon } from '../../assets/img/icon/logout.svg'
+import { Link } from 'react-router-dom';
 
 
 export const MainSidebar = styled.div`
@@ -72,7 +73,7 @@ height: 150px;
   margin-bottom: 30px;
 }
 `
-export const SidebarLink = styled.a`
+export const SidebarLink = styled(Link)`
 width: 100%;
 height: 100%;
 `

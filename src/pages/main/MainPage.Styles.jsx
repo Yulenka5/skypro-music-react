@@ -28,4 +28,3 @@ export const Main = styled.div`
   `
 export const Footer = styled.div``
   
-

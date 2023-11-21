@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import SpriteIcon from '../../assets/img/icon/sprite.svg'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Track.Styles'
@@ -38,7 +37,7 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-                <S.TrackTitleLink href="http://">
+                <S.TrackTitleLink>
                   Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
                 </S.TrackTitleLink>
               )}
@@ -48,22 +47,20 @@ function Track() {
             {isLoading ? (
               <Skeleton width={270} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+              <S.TrackAuthorLink>Nero</S.TrackAuthorLink>
             )}
           </S.TrackAuthor>
           <S.TrackAlbum>
             {isLoading ? (
               <Skeleton width={450} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAlbumLink href="http://">
+              <S.TrackAlbumLink>
                 Welcome Reality
               </S.TrackAlbumLink>
             )}
           </S.TrackAlbum>
           <S.TrackTime>
-            <S.TrackTimeSvg alt="time">
-              <use xlinkHref={`${SpriteIcon}#icon-like`}></use>
-            </S.TrackTimeSvg>
+            <S.TrackTimeSvg/>
             <S.TrackTimeText>4:44</S.TrackTimeText>
           </S.TrackTime>
         </S.PlaylistTrack>

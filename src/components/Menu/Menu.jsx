@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Logo from '../../assets/img/logo.png'
 import * as S from './Menu.Styles'
+import { Link } from 'react-router-dom'
 
 function Menu() {
   const [isOpened, setIsOpened] = useState(false)
@@ -13,7 +14,9 @@ function Menu() {
   return (
     <S.MainNav>
       <S.NavLogo>
-        <S.LogoImage src={Logo} alt="Logo" />
+        <Link to="/">
+          <S.LogoImage src={Logo} alt="Logo" />
+        </Link>
       </S.NavLogo>
       <S.NavBurger onClick={onBurgerClick}>
         <S.BurgerLine />
@@ -24,13 +27,19 @@ function Menu() {
         <S.NavMenu>
           <S.MenuList>
             <S.MenuItem>
-              <S.MenuLink href="http://">Главное</S.MenuLink>
+              <Link to="/">
+                <S.MenuLink>Главное</S.MenuLink>
+              </Link>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink href="http://">Мой плейлист</S.MenuLink>
+              <Link to="/Favorites">
+                <S.MenuLink>Мой плейлист</S.MenuLink>
+              </Link>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink href="http://">Войти</S.MenuLink>
+              <Link to="/Login">
+                <S.MenuLink>Войти</S.MenuLink>
+              </Link>
             </S.MenuItem>
           </S.MenuList>
         </S.NavMenu>

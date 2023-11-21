@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
+import { ReactComponent as LikeIcon } from '../../assets/img/icon/like.svg'
 
 
 export const ContentPlaylist = styled.div`
@@ -123,7 +124,7 @@ color: #696969;
 `
 export const TrackTime = styled.div`
 `
-export const TrackTimeSvg = styled.svg`
+export const TrackTimeSvg = styled(LikeIcon)`
 width: 14px;
 height: 12px;
 margin-right: 17px;

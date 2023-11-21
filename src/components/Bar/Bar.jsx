@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import SpriteIkon from '../../assets/img/icon/sprite.svg'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Bar.Styles'
