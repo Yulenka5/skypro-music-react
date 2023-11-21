@@ -1,18 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
-  background-color: #383838;
-  `
+  background-color: #181818;
+  overflow: auto;
+`
 export const Conteiner = styled.div`
   max-width: 1920px;
   height: 100vh;
   margin: 0 auto;
   position: relative;
   background-color: #181818;
-  `
+`
 export const Main = styled.div`
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -25,6 +26,5 @@ export const Main = styled.div`
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  `
+`
 export const Footer = styled.div``
-  

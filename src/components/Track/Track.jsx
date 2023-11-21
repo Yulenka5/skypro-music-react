@@ -3,18 +3,29 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Track.Styles'
 
-function Track() {
+function Track(props) {
   const [isLoading, setIsLoading] = useState(true)
+  const [trackTime, setTrackTime] = useState(0)
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 5000)
+    }, 3000)
+  }, [])
+
+  function formatDuration(durationInSeconds) {
+    const minutes = Math.floor(durationInSeconds / 60)
+    const seconds = durationInSeconds % 60
+    setTrackTime(`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`)
+  }
+
+  useEffect(() => {
+    formatDuration(props.duration)
   }, [])
 
   return (
     <S.ContentPlaylist>
-      <S.PlaylistItem>
+      <S.PlaylistItem onClick={props.onClick}>
         <S.PlaylistTrack>
           <S.TrackTitle>
             <S.TrackTitleImage>
@@ -26,7 +37,7 @@ function Track() {
                   highlightColor="#444"
                 />
               ) : (
-              <S.NoteSvg/>
+                <S.NoteSvg />
               )}
             </S.TrackTitleImage>
             <S.TrackTitleText>
@@ -38,7 +49,7 @@ function Track() {
                 />
               ) : (
                 <S.TrackTitleLink>
-                  Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
+                  <S.TrackTitleSpan>{props.name}</S.TrackTitleSpan>
                 </S.TrackTitleLink>
               )}
             </S.TrackTitleText>
@@ -47,21 +58,19 @@ function Track() {
             {isLoading ? (
               <Skeleton width={270} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAuthorLink>Nero</S.TrackAuthorLink>
+              <S.TrackAuthorLink>{props.author}</S.TrackAuthorLink>
             )}
           </S.TrackAuthor>
           <S.TrackAlbum>
             {isLoading ? (
               <Skeleton width={450} baseColor="#202020" highlightColor="#444" />
             ) : (
-              <S.TrackAlbumLink>
-                Welcome Reality
-              </S.TrackAlbumLink>
+              <S.TrackAlbumLink>{props.album}</S.TrackAlbumLink>
             )}
           </S.TrackAlbum>
           <S.TrackTime>
-            <S.TrackTimeSvg/>
-            <S.TrackTimeText>4:44</S.TrackTimeText>
+            <S.TrackTimeSvg />
+            <S.TrackTimeText>{trackTime}</S.TrackTimeText>
           </S.TrackTime>
         </S.PlaylistTrack>
       </S.PlaylistItem>

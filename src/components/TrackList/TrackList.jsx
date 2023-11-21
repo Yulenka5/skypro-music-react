@@ -4,7 +4,7 @@ import { useState } from 'react'
 import * as S from './TrackList.Styles'
 import { SearchBar } from './SearchBar'
 
-function TrackList() {
+function TrackList(props) {
   const [activeFilter, setActiveFilter] = useState(null)
 
   function changeActiveFilter(newFilter) {
@@ -45,7 +45,18 @@ function TrackList() {
           </S.ContentTitleCol4>
         </S.ContentTitle>
       </S.CenterblockContent>
-      <Track />
+      <p>{props.error}</p>
+      {props.trackList.map((e) => (
+        <Track
+          onClick={() => props.setSelectedTrack(e)}
+          {...props}
+          key={e.id}
+          name={e.name}
+          author={e.author}
+          album={e.album}
+          duration={e.duration_in_seconds}
+        />
+      ))}
     </S.MainCenterblock>
   )
 }

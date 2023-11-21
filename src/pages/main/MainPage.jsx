@@ -3,13 +3,13 @@ import TrackList from '../../components/TrackList/TrackList'
 import Sidebar from '../../components/Sidbar/Sidebar'
 import * as S from './MainPage.Styles'
 
-function MainPage() {
+function MainPage(props) {
   return (
     <S.Wrapper>
       <S.Conteiner>
         <S.Main>
           <Menu />
-          <TrackList />
+          <TrackList trackList={props.trackList} setSelectedTrack={props.setSelectedTrack} error={props.error}/>
           <Sidebar />
         </S.Main>
         <S.Footer />
