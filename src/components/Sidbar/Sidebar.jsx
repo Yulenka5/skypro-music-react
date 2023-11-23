@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import * as S from './Sidebar.Styles'
 import PlayList_1 from '../../assets/img/class-music.png'
 import PlayList_2 from '../../assets/img/el-music.png'
@@ -6,15 +5,7 @@ import PlayList_3 from '../../assets/img/rock.png'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-function Sidebar() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 5000)
-  }, [])
-
+function Sidebar(props) {
   return (
     <S.MainSidebar>
       <S.SidebarPersonal>
@@ -25,7 +16,7 @@ function Sidebar() {
         <S.SidebarList>
           <S.SidebarItem>
             <S.SidebarLink to="/Category/1">
-              {isLoading ? (
+              {props.isLoading ? (
                 <Skeleton
                   width={250}
                   height={150}
@@ -39,7 +30,7 @@ function Sidebar() {
           </S.SidebarItem>
           <S.SidebarItem>
             <S.SidebarLink to="/Category/2">
-              {isLoading ? (
+              {props.isLoading ? (
                 <Skeleton
                   width={250}
                   height={150}
@@ -53,7 +44,7 @@ function Sidebar() {
           </S.SidebarItem>
           <S.SidebarItem>
             <S.SidebarLink to="/Category/3">
-              {isLoading ? (
+              {props.isLoading ? (
                 <Skeleton
                   width={250}
                   height={150}

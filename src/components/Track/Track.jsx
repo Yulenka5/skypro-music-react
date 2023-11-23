@@ -1,17 +1,10 @@
 import { useEffect, useState } from 'react'
-import Skeleton from 'react-loading-skeleton'
+// import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Track.Styles'
 
 function Track(props) {
-  const [isLoading, setIsLoading] = useState(true)
   const [trackTime, setTrackTime] = useState(0)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
-  }, [])
 
   function formatDuration(durationInSeconds) {
     const minutes = Math.floor(durationInSeconds / 60)
@@ -29,44 +22,44 @@ function Track(props) {
         <S.PlaylistTrack>
           <S.TrackTitle>
             <S.TrackTitleImage>
-              {isLoading ? (
+              {/* {props.isLoading ? (
                 <Skeleton
                   width={55}
                   height={55}
                   baseColor="#202020"
                   highlightColor="#444"
                 />
-              ) : (
-                <S.NoteSvg />
-              )}
+              ) : ( */}
+              <S.NoteSvg />
+              {/* )} */}
             </S.TrackTitleImage>
             <S.TrackTitleText>
-              {isLoading ? (
+              {/* {props.isLoading ? (
                 <Skeleton
                   width={270}
                   baseColor="#202020"
                   highlightColor="#444"
                 />
-              ) : (
-                <S.TrackTitleLink>
-                  <S.TrackTitleSpan>{props.name}</S.TrackTitleSpan>
-                </S.TrackTitleLink>
-              )}
+              ) : ( */}
+              <S.TrackTitleLink>
+                <S.TrackTitleSpan>{props.name}</S.TrackTitleSpan>
+              </S.TrackTitleLink>
+              {/* )} */}
             </S.TrackTitleText>
           </S.TrackTitle>
           <S.TrackAuthor>
-            {isLoading ? (
+            {/* {props.isLoading ? (
               <Skeleton width={270} baseColor="#202020" highlightColor="#444" />
-            ) : (
-              <S.TrackAuthorLink>{props.author}</S.TrackAuthorLink>
-            )}
+            ) : ( */}
+            <S.TrackAuthorLink>{props.author}</S.TrackAuthorLink>
+            {/* )} */}
           </S.TrackAuthor>
           <S.TrackAlbum>
-            {isLoading ? (
+            {/* {props.isLoading ? (
               <Skeleton width={450} baseColor="#202020" highlightColor="#444" />
-            ) : (
-              <S.TrackAlbumLink>{props.album}</S.TrackAlbumLink>
-            )}
+            ) : ( */}
+            <S.TrackAlbumLink>{props.album}</S.TrackAlbumLink>
+            {/* )} */}
           </S.TrackAlbum>
           <S.TrackTime>
             <S.TrackTimeSvg />

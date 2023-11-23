@@ -14,7 +14,12 @@ export function RoutesApp(props) {
         path="/"
         element={
           <ProtectedRoute>
-            <MainPage trackList={props.trackList} setSelectedTrack={props.setSelectedTrack} error={props.error}/>
+            <MainPage
+              trackList={props.trackList}
+              setSelectedTrack={props.setSelectedTrack}
+              error={props.error}
+              isLoading={props.isLoading}
+            />
           </ProtectedRoute>
         }
       />

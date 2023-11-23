@@ -7,8 +7,10 @@ function App() {
   const [trackList, setTrackList] = useState([])
   const [selectedTrack, setSelectedTrack] = useState(null)
   const [error, setError] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true)
     getTracks()
       .then((response) => {
         setTrackList(response.data)
@@ -16,14 +18,20 @@ function App() {
       .catch((error) => {
         setError(error.message)
       })
-      
+      .finally(() => {
+        setIsLoading(false)
+      })
   }, [])
-
 
   return (
     <>
-      <RoutesApp trackList={trackList} setSelectedTrack={setSelectedTrack} error={error}/>
-      <Bar selectedTrack={selectedTrack}/>
+      <RoutesApp
+        trackList={trackList}
+        setSelectedTrack={setSelectedTrack}
+        error={error}
+        isLoading={isLoading}
+      />
+      <Bar selectedTrack={selectedTrack} isLoading={isLoading} />
     </>
   )
 }

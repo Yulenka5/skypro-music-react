@@ -1,17 +1,8 @@
-import { useEffect, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './Bar.Styles'
 
 function Bar(props) {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 5000)
-  }, [])
-
   if (!props.selectedTrack) {
     return null
   }
@@ -46,7 +37,7 @@ function Bar(props) {
                   <S.NoteSvg />
                 </S.TrackPlayImage>
                 <S.TrackPlayAuthor>
-                  {isLoading ? (
+                  {props.isLoading ? (
                     <Skeleton
                       width={90}
                       baseColor="#202020"
@@ -59,7 +50,7 @@ function Bar(props) {
                   )}
                 </S.TrackPlayAuthor>
                 <S.TrackPlayAlbum>
-                  {isLoading ? (
+                  {props.isLoading ? (
                     <Skeleton
                       width={90}
                       baseColor="#202020"

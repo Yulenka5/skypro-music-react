@@ -9,8 +9,13 @@ function MainPage(props) {
       <S.Conteiner>
         <S.Main>
           <Menu />
-          <TrackList trackList={props.trackList} setSelectedTrack={props.setSelectedTrack} error={props.error}/>
-          <Sidebar />
+          <TrackList
+            trackList={props.trackList}
+            setSelectedTrack={props.setSelectedTrack}
+            error={props.error}
+            isLoading={props.isLoading}
+          />
+          <Sidebar isLoading={props.isLoading}/>
         </S.Main>
         <S.Footer />
       </S.Conteiner>
