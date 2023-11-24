@@ -7,14 +7,19 @@ import { ProtectedRoute } from './protected-route/ProtectedRoute'
 import MyPlaylist from './pages/favorites/MyPlaylist'
 import NotFound from '../src/pages/not-found/NotFound'
 
-export function RoutesApp() {
+export function RoutesApp(props) {
   return (
     <Routes>
       <Route
         path="/"
         element={
           <ProtectedRoute>
-            <MainPage />
+            <MainPage
+              trackList={props.trackList}
+              setSelectedTrack={props.setSelectedTrack}
+              error={props.error}
+              isLoading={props.isLoading}
+            />
           </ProtectedRoute>
         }
       />
