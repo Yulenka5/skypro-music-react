@@ -55,10 +55,12 @@ function TrackList(props) {
             onClick={() => props.setSelectedTrack(e)}
             {...props}
             key={e.id}
+            id={e.id}
             name={e.name}
             author={e.author}
             album={e.album}
             duration={e.duration_in_seconds}
+            url={e.track_file}
           />
         ))
       )}

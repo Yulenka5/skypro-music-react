@@ -31,7 +31,9 @@ function App() {
         error={error}
         isLoading={isLoading}
       />
-      <Bar selectedTrack={selectedTrack} isLoading={isLoading} />
+      {selectedTrack && (
+        <Bar selectedTrack={selectedTrack} isLoading={isLoading} />
+      )}
     </>
   )
 }
