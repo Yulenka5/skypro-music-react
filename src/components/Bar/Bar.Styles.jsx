@@ -350,3 +350,11 @@ export const VolumeProgress = styled.div`
 export const VolumeProgressLine = styled.input`
   width: 109px;
 `
+export const BarProgressTime = styled.span`
+  color: #696969;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 16px;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.016px;
+`

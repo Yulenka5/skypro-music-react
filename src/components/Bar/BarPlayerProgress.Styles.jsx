@@ -54,3 +54,4 @@ export const ProgressInput = styled.input`
     height: var(--progress-height);
   }
 `
+
