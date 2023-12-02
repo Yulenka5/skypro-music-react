@@ -18,9 +18,14 @@ function Bar(props) {
   const [volume, setVolume] = useState(50)
 
   function formatDuration(durationInSeconds) {
-    const minutes = Math.floor(durationInSeconds / 60)
-    const seconds = durationInSeconds % 60
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+    const seconds = Number(durationInSeconds)
+    return (
+      Math.floor(Math.round(seconds) / 60)
+        .toString()
+        .padStart(2, '0') +
+      ':' +
+      (Math.round(seconds) % 60).toString().padStart(2, '0')
+    )
   }
 
   useEffect(() => {

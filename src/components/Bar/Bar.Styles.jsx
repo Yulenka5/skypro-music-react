@@ -12,7 +12,7 @@ import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
 
 export const Audio = styled.audio`
   display: none;
-`;
+`
 
 export const PrevSvg = styled(PrevIcon)`
   cursor: pointer;
@@ -53,13 +53,22 @@ export const NextSvg = styled(NextIcon)`
 export const RepeatSvg = styled(RepeatIcon)`
   cursor: pointer;
   path {
-    fill: #696969;
+    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#b1b1b1')};
   }
   &:hover path {
-    fill: #acacac;
+    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#707070')};
   }
   &:active path {
-    fill: white;
+    fill: #000000;
+  }
+
+  ${(props)=>
+  props.isTrackRepeat && 
+  `
+  &:active path {
+    fill: #000000
+  }
+  `
   }
 `
 export const ShuffleSvg = styled(ShuffleIcon)`
