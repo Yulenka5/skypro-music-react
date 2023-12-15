@@ -14,21 +14,23 @@ function Login() {
             </S.ModalFormLink>
             <S.ModalInput
               className="login"
-              type="text"
+              autoComplete="username"
+              type="email"
               name="login"
               placeholder="Почта"
             />
             <S.ModalInput
               className="password"
+              autoComplete="current-password"
               type="password"
               name="password"
               placeholder="Пароль"
             />
             <S.ModalBtnEnter>
-              <a href="../index.html">Войти</a>
+              Войти
             </S.ModalBtnEnter>
             <S.ModalBtnSignUp>
-              <a href="signup.html">Зарегистрироваться</a>
+              Зарегистрироваться
             </S.ModalBtnSignUp>
           </S.ModalFormLogin>
         </S.ModalBlock>

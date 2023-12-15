@@ -53,22 +53,13 @@ export const NextSvg = styled(NextIcon)`
 export const RepeatSvg = styled(RepeatIcon)`
   cursor: pointer;
   path {
-    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#b1b1b1')};
+    fill: #b1b1b1;
   }
   &:hover path {
-    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#707070')};
+    fill: #707070;
   }
   &:active path {
     fill: #000000;
-  }
-
-  ${(props)=>
-  props.isTrackRepeat && 
-  `
-  &:active path {
-    fill: #000000
-  }
-  `
   }
 `
 export const ShuffleSvg = styled(ShuffleIcon)`
