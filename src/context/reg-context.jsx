@@ -8,6 +8,7 @@ export function UserContext({ children }) {
   const [repeatPassword, setRepeatPassword] = useState('')
   const [token, setToken] = useState(null)
   const [userData, setUserData] = useState(null)
+  const [error, setError] = useState('')
 
   const value = {
     email,
@@ -20,7 +21,10 @@ export function UserContext({ children }) {
     setToken,
     userData,
     setUserData,
+    setError,
+    error
   }
+
   return (
     <AutorizationContext.Provider value={value}>
       {children}
