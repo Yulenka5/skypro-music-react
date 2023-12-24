@@ -1,9 +1,11 @@
 import * as S from './Login.Styles'
-import { loginUser } from '../../Api'
+import { loginUser, getToken } from '../../Api'
 import logoModalIcon from '../../assets/img/logo_modal.png'
 import { useContext, useState, useEffect } from 'react'
 import { AutorizationContext } from '../../context/reg-context'
 import { Link, useNavigate } from 'react-router-dom'
+
+
 
 function Login() {
   const data = useContext(AutorizationContext)
@@ -29,6 +31,7 @@ function Login() {
     loginUser({ email, password })
       .then((response) => {
         setUserData(response.data)
+        localStorage.setItem('userData', JSON.stringify(response.data))
         getToken({ email, password })
           .then((response) => {
             setToken(response.data)

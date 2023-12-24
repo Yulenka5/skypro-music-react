@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -41,7 +42,7 @@ export const ModalFormLogin = styled.form`
     margin-bottom: 30px;
   }
 `
-export const ModalFormLink = styled.a``
+export const ModalFormLink = styled(Link)``
   
 
 export const ModalLogo = styled.div`
@@ -154,6 +155,10 @@ export const ModalBtnEnter = styled.button`
   &:active {
     background-color: #271a58;
   }
+
+  &:disabled {
+    background-color: gray;
+  }
 `
 export const ModalBtnSignUp = styled.button`
   width: 278px;
@@ -203,6 +208,10 @@ export const ModalBtnSignUp = styled.button`
 
   &:active {
     background-color: #d9d9d9;
+  }
+
+  &:disabled {
+    background-color: gray;
   }
 `
 export const Error = styled.div`

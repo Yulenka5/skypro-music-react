@@ -4,13 +4,24 @@ import PlayList_2 from '../../assets/img/el-music.png'
 import PlayList_3 from '../../assets/img/rock.png'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { AutorizationContext } from '../../context/reg-context'
+import { useContext } from 'react'
 
 function Sidebar(props) {
+  const { userData } = useContext(AutorizationContext)
+
+  function logout() {
+    localStorage.removeItem('token')
+    localStorage.removeItem('userData')
+  }
+
   return (
     <S.MainSidebar>
       <S.SidebarPersonal>
-        <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-        <S.LogoutSvg />
+        <S.SidebarPersonalName>
+          {userData ? userData.username : ''}
+        </S.SidebarPersonalName>
+        <S.LogoutSvg onClick={logout} />
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
