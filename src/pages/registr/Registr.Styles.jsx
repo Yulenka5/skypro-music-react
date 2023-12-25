@@ -131,7 +131,7 @@ export const ModalBtnSingupEnt = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -149,7 +149,7 @@ export const ModalBtnSingupEnt = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
   
   &:disabled {
     background-color: gray;

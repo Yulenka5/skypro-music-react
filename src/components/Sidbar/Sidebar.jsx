@@ -6,13 +6,16 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { AutorizationContext } from '../../context/reg-context'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Sidebar(props) {
   const { userData } = useContext(AutorizationContext)
+  const navigate = useNavigate()
 
   function logout() {
     localStorage.removeItem('token')
     localStorage.removeItem('userData')
+    navigate('/login')
   }
 
   return (
@@ -26,7 +29,7 @@ function Sidebar(props) {
       <S.SidebarBlock>
         <S.SidebarList>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/1">
+            <S.SidebarLink to="/category/1">
               {props.isLoading ? (
                 <Skeleton
                   width={250}
@@ -40,7 +43,7 @@ function Sidebar(props) {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/2">
+            <S.SidebarLink to="/category/2">
               {props.isLoading ? (
                 <Skeleton
                   width={250}
@@ -54,7 +57,7 @@ function Sidebar(props) {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink to="/Category/3">
+            <S.SidebarLink to="/category/3">
               {props.isLoading ? (
                 <Skeleton
                   width={250}

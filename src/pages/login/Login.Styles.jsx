@@ -128,7 +128,7 @@ export const ModalBtnEnter = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -146,7 +146,7 @@ export const ModalBtnEnter = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
 
   &:hover {
     background-color: #3f007d;
@@ -182,7 +182,7 @@ export const ModalBtnSignUp = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -200,7 +200,7 @@ export const ModalBtnSignUp = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
 
   &:hover {
     background-color: #f4f5f6;

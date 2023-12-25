@@ -15,12 +15,12 @@ export const GlobalStyled = createGlobalStyle`
   box-sizing: border-box;
 }
 
-a,
+/* a,
 a:visited {
   text-decoration: none;
   font-family: 'StratosSkyeng', sans-serif;
   cursor: pointer;
-}
+} */
 
 button,
 ._btn {
