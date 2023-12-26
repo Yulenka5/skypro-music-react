@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -43,7 +44,7 @@ export const ModalFormLogin = styled.form`
     margin-bottom: 30px;
   }
 `
-export const ModalFormLink = styled.a``
+export const ModalFormLink = styled(Link)``
 
 export const ModalLogo = styled.div`
   width: 140px;
@@ -130,7 +131,7 @@ export const ModalBtnSingupEnt = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -148,5 +149,17 @@ export const ModalBtnSingupEnt = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  } */
+  
+  &:disabled {
+    background-color: gray;
   }
+`
+export const Error = styled.div`
+color: #ed0909;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+margin-top: 20px;
+text-align: left;
 `

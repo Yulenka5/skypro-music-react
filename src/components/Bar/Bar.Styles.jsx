@@ -9,6 +9,7 @@ import { ReactComponent as PlayLikeIcon } from '../../assets/img/icon/like.svg'
 import { ReactComponent as PlayDisLikeIcon } from '../../assets/img/icon/dislike.svg'
 import { ReactComponent as VolumeIcon } from '../../assets/img/icon/volume.svg'
 import { ReactComponent as NoteIcon } from '../../assets/img/icon/note.svg'
+import { Link } from 'react-router-dom'
 
 export const Audio = styled.audio`
   display: none;
@@ -53,22 +54,13 @@ export const NextSvg = styled(NextIcon)`
 export const RepeatSvg = styled(RepeatIcon)`
   cursor: pointer;
   path {
-    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#b1b1b1')};
+    fill: #b1b1b1;
   }
   &:hover path {
-    fill: ${(props)=>(props.isTrackRepeat ? '#ffffff' : '#707070')};
+    fill: #707070;
   }
   &:active path {
     fill: #000000;
-  }
-
-  ${(props)=>
-  props.isTrackRepeat && 
-  `
-  &:active path {
-    fill: #000000
-  }
-  `
   }
 `
 export const ShuffleSvg = styled(ShuffleIcon)`
@@ -271,7 +263,7 @@ export const TrackPlayAuthor = styled.div`
   grid-area: author;
   min-width: 49px;
 `
-export const TrackPlayAuthorLink = styled.a`
+export const TrackPlayAuthorLink = styled(Link)`
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -285,7 +277,7 @@ export const TrackPlayAlbum = styled.div`
   grid-area: album;
   min-width: 49px;
 `
-export const TrackPlayAlbumLink = styled.a`
+export const TrackPlayAlbumLink = styled(Link)`
   font-style: normal;
   font-weight: 400;
   font-size: 13px;

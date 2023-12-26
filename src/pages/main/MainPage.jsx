@@ -4,6 +4,7 @@ import Sidebar from '../../components/Sidbar/Sidebar'
 import * as S from './MainPage.Styles'
 
 function MainPage(props) {
+
   return (
     <S.Wrapper>
       <S.Conteiner>

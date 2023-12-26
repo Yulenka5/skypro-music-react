@@ -131,7 +131,7 @@ function Bar(props) {
         controls
         ref={audioRef}
         src={props.selectedTrack.track_file}
-        handleProgressChange={handleProgressChange}
+        onChange={handleProgressChange}
         type="audio/mpeg"
       ></S.Audio>
 
