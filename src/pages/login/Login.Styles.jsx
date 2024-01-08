@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -41,7 +42,7 @@ export const ModalFormLogin = styled.form`
     margin-bottom: 30px;
   }
 `
-export const ModalFormLink = styled.a``
+export const ModalFormLink = styled(Link)``
   
 
 export const ModalLogo = styled.div`
@@ -127,7 +128,7 @@ export const ModalBtnEnter = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -145,7 +146,7 @@ export const ModalBtnEnter = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
 
   &:hover {
     background-color: #3f007d;
@@ -153,6 +154,10 @@ export const ModalBtnEnter = styled.button`
 
   &:active {
     background-color: #271a58;
+  }
+
+  &:disabled {
+    background-color: gray;
   }
 `
 export const ModalBtnSignUp = styled.button`
@@ -177,7 +182,7 @@ export const ModalBtnSignUp = styled.button`
   -ms-flex-pack: center;
   justify-content: center;
 
-  & a {
+  /* & a {
     width: 100%;
     height: 100%;
     font-style: normal;
@@ -195,7 +200,7 @@ export const ModalBtnSignUp = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
+  } */
 
   &:hover {
     background-color: #f4f5f6;
@@ -204,4 +209,16 @@ export const ModalBtnSignUp = styled.button`
   &:active {
     background-color: #d9d9d9;
   }
+
+  &:disabled {
+    background-color: gray;
+  }
+`
+export const Error = styled.div`
+color: #ed0909;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+margin-top: 20px;
+text-align: left;
 `

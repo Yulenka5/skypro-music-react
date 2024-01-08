@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getTracks } from './Api'
 import Bar from './components/Bar/Bar'
 import { RoutesApp } from './Routes'
+import { UserContext } from './context/reg-context'
 
 function App() {
   const [trackList, setTrackList] = useState([])
@@ -25,12 +26,14 @@ function App() {
 
   return (
     <>
-      <RoutesApp
-        trackList={trackList}
-        setSelectedTrack={setSelectedTrack}
-        error={error}
-        isLoading={isLoading}
-      />
+      <UserContext>
+        <RoutesApp
+          trackList={trackList}
+          setSelectedTrack={setSelectedTrack}
+          error={error}
+          isLoading={isLoading}
+        />
+      </UserContext>
       {selectedTrack && (
         <Bar selectedTrack={selectedTrack} isLoading={isLoading} />
       )}

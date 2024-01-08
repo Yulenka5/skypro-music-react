@@ -46,7 +46,7 @@ function TrackList(props) {
           </S.ContentTitleCol4>
         </S.ContentTitle>
       </S.CenterblockContent>
-      <p>{props.error}</p>
+      <>{props.error}</>
       {props.isLoading ? (
         <SkeletonTrack />
       ) : (

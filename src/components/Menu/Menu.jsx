@@ -32,12 +32,12 @@ function Menu() {
               </Link>
             </S.MenuItem>
             <S.MenuItem>
-              <Link to="/Favorites">
+              <Link to="/favorites">
                 <S.MenuLink>Мой плейлист</S.MenuLink>
               </Link>
             </S.MenuItem>
             <S.MenuItem>
-              <Link to="/Login">
+              <Link to="/login">
                 <S.MenuLink>Войти</S.MenuLink>
               </Link>
             </S.MenuItem>
